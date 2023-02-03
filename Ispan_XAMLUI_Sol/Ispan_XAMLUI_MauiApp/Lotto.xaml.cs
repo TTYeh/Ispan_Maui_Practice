@@ -12,7 +12,7 @@ public partial class Lotto : ContentPage
         int TotalLottoNum = 49;
         int countOfWant = 6;
         // 49個號碼中，產生中獎號6個並回傳
-        List<int> prizeNumber = GetRandomNumber(TotalLottoNum).Take(countOfWant).ToList();
+        List<int> prizeNumber = GetRandomNumber(TotalLottoNum).Take(countOfWant).OrderBy(w => w).ToList();
         LottoBtn.Text = List2String(prizeNumber);
 
         // 不知名用途
@@ -20,12 +20,9 @@ public partial class Lotto : ContentPage
     }
     private string List2String(List<int> l)
     {
-        string result = string.Empty;
-        foreach (var item in l)
-        {
-            result += item.ToString() + ", ";
-        }
-        return result;
+        // 組合字串 中間間隔,
+        string joinedString = string.Join(",", l);
+        return joinedString;
     }
 
     private List<int> GetRandomNumber(int count)

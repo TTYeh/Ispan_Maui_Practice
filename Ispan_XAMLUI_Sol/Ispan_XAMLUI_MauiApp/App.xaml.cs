@@ -6,8 +6,8 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
-            // MainPage = new Lotto();
+            //MainPage = new AppShell();
+            MainPage = new Lotto();
         }
     }
 }
