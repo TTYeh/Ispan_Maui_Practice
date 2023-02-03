@@ -13,16 +13,10 @@ public partial class Lotto : ContentPage
         int countOfWant = 6;
         // 49個號碼中，產生中獎號6個並回傳
         List<int> prizeNumber = GetRandomNumber(TotalLottoNum).Take(countOfWant).OrderBy(w => w).ToList();
-        LottoBtn.Text = List2String(prizeNumber);
+        LottoBtn.Text = prizeNumber.List2StringWithComma();
 
         // 不知名用途
         //SemanticScreenReader.Announce(LottoBtn.Text);
-    }
-    private string List2String(List<int> l)
-    {
-        // 組合字串 中間間隔,
-        string joinedString = string.Join(",", l);
-        return joinedString;
     }
 
     private List<int> GetRandomNumber(int count)
@@ -32,6 +26,7 @@ public partial class Lotto : ContentPage
         // 將List每個元素隨機打亂
         return (List<int>)numBank.Shuffle();
     }
+
 }
 public static class ListExtension
 {
@@ -49,5 +44,11 @@ public static class ListExtension
             list[n] = value;
         }
         return list;
+    }
+    public static string List2StringWithComma<T>(this IList<T> l)
+    {
+        // 組合字串 中間間隔","
+        string joinedString = string.Join(",", l);
+        return joinedString;
     }
 }
