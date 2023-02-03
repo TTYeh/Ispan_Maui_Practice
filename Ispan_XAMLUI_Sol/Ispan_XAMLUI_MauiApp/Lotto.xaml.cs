@@ -27,7 +27,7 @@ public partial class Lotto : ContentPage
 
     private List<int> GetRandomNumber(int count)
     {
-        // 產生0~ count的List
+        // 產生1 ~ count的List
         List<int> numBank = Enumerable.Range(1, count).ToList();
         // 將List每個元素隨機打亂
         return (List<int>)numBank.Shuffle();
