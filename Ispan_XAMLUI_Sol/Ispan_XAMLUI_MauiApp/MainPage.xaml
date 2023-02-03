@@ -12,32 +12,36 @@
         VerticalOptions="FillAndExpand"
         Background="AQUA"
         Orientation="Horizontal">
-            <Button 
-                Background="RED"
+            <Label 
+                myNamespace:Name="colorLabel_1"
+                BackgroundColor ="Red"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
                 Text="紅" 
                 FontSize="32"
                 FontAttributes="Bold"
                 TextColor="Black"/>
-            <Button 
-                Background="BLUE"
+            <Label 
+                myNamespace:Name="colorLabel_2"
+                BackgroundColor="Blue"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
                 Text="藍" 
                 FontSize="32"
                 FontAttributes="Bold"
                 TextColor="Black"/>
-            <Button 
-                Background="yellow"
+            <Label 
+                myNamespace:Name="colorLabel_3"
+                BackgroundColor="Yellow"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
                 Text="黃" 
                 FontSize="32"
                 FontAttributes="Bold"
                 TextColor="Black"/>
-            <Button 
-                Background="Green"
+            <Label 
+                myNamespace:Name="colorLabel_4"
+                BackgroundColor="Green"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
                 Text="綠" 
@@ -62,8 +66,9 @@
                 Background="#BEBEBE"
                 HorizontalOptions="StartAndExpand"
                 VerticalOptions="StartAndExpand"
-                Text="第二行"
+                Text="洗牌"
                 FontSize="32"
+                Clicked="WashCardClicked"
                 TextColor="Black"/>
             <Button 
                 Background="#BEBEBE"

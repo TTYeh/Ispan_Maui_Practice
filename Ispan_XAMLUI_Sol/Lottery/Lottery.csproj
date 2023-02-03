@@ -6,17 +6,17 @@
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
-		<RootNamespace>Ispan_XAMLUI_MauiApp</RootNamespace>
+		<RootNamespace>Lottery</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<!-- Display name -->
-		<ApplicationTitle>Ispan_XAMLUI_MauiApp</ApplicationTitle>
+		<ApplicationTitle>Lottery</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.ispan_xamlui_mauiapp</ApplicationId>
-		<ApplicationIdGuid>DCDECC07-F9D0-41FD-94BB-1F97FE09C437</ApplicationIdGuid>
+		<ApplicationId>com.companyname.lottery</ApplicationId>
+		<ApplicationIdGuid>EC0DA61B-D06F-4370-A9A4-424DA3BEE9CE</ApplicationIdGuid>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
@@ -46,16 +46,6 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Remove="Resources\Images\nasida.PNG" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="Lotto.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

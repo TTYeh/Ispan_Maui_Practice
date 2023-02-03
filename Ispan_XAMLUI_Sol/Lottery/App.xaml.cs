@@ -1,4 +1,4 @@
-﻿namespace Ispan_XAMLUI_MauiApp
+﻿namespace Lottery
 {
     public partial class App : Application
     {
@@ -7,7 +7,6 @@
             InitializeComponent();
 
             MainPage = new AppShell();
-            // MainPage = new Lotto();
         }
     }
 }
