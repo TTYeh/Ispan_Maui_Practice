@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:myNamespace="http://schemas.microsoft.com/winfx/2009/xaml"
+             myNamespace:Class="Ispan_XAMLUI_MauiApp.MainPage">
+    <StackLayout
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+        Background="AQUA"
+        Orientation="Vertical">
+        <StackLayout
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+        Background="AQUA"
+        Orientation="Horizontal">
+            <Button 
+                Background="RED"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Text="紅" 
+                FontSize="32"
+                FontAttributes="Bold"
+                TextColor="Black"/>
+            <Button 
+                Background="BLUE"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Text="藍" 
+                FontSize="32"
+                FontAttributes="Bold"
+                TextColor="Black"/>
+            <Button 
+                Background="yellow"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Text="黃" 
+                FontSize="32"
+                FontAttributes="Bold"
+                TextColor="Black"/>
+            <Button 
+                Background="Green"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Text="綠" 
+                FontSize="32"
+                FontAttributes="Bold"
+                TextColor="Black"/>
+        </StackLayout>
+        <StackLayout
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+        Background="#BEBEBE"
+        Orientation="Vertical">
+            <Label 
+                myNamespace:Name="lebelTest"
+                Background="#BEBEBE"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="StartAndExpand"
+                Text="第一行"
+                FontSize="32"
+                TextColor="Black"/>
+            <Button 
+                Background="#BEBEBE"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="StartAndExpand"
+                Text="第二行"
+                FontSize="32"
+                TextColor="Black"/>
+            <Button 
+                Background="#BEBEBE"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="StartAndExpand"
+                Text="第三行"
+                FontSize="32"
+                TextColor="Black"/>
+            <Button 
+                Background="#BEBEBE"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="StartAndExpand"
+                Text="第四行"
+                FontSize="32"
+                TextColor="Black"/>
+
+
+        </StackLayout>
+    </StackLayout>
+    <!--<ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="nasida.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="54088!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>-->
+
+</ContentPage>
