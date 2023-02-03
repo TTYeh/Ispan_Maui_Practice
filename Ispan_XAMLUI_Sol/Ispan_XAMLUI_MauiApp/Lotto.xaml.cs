@@ -8,9 +8,14 @@ public partial class Lotto : ContentPage
 	}
     private void LottoClicked(object sender, EventArgs e)
     {
-
-        List<int> prizeNumber = GetRandomNumber(49).Take(6).ToList();
+        // 定義變數
+        int TotalLottoNum = 49;
+        int countOfWant = 6;
+        // 49個號碼中，產生中獎號6個並回傳
+        List<int> prizeNumber = GetRandomNumber(TotalLottoNum).Take(countOfWant).ToList();
         LottoBtn.Text = List2String(prizeNumber);
+
+        // 不知名用途
         //SemanticScreenReader.Announce(LottoBtn.Text);
     }
     private string List2String(List<int> l)
@@ -25,10 +30,9 @@ public partial class Lotto : ContentPage
 
     private List<int> GetRandomNumber(int count)
     {
-        var rdn = new Random();
+        // 產生0~ count的List
         List<int> numBank = Enumerable.Range(1, count).ToList();
-
-
+        // 將List每個元素隨機打亂
         return (List<int>)numBank.Shuffle();
     }
 }
