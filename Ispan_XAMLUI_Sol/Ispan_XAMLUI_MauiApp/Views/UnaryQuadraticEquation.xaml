@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ispan_XAMLUI_MauiApp.UnaryQuadraticEquation"
+             Title="UnaryQuadraticEquation">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout 
+                Orientation="Horizontal">
+                <Label Text="一元二次方程式                    "
+                FontSize="32"
+                BackgroundColor="Black"
+                TextColor="White"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="Center"
+                MaximumHeightRequest="50"
+                HeightRequest="100"
+                   />
+
+            </StackLayout>
+            <StackLayout 
+                Orientation="Horizontal">
+                <Entry x:Name="txtA"
+                       BackgroundColor="Azure"
+                           FontSize="30"
+                           HorizontalOptions="FillAndExpand"/>
+                <Label
+                    Text="X2+"
+                    BackgroundColor="CadetBlue"
+                    FontSize="30"
+                           HorizontalOptions="FillAndExpand"/>
+                <Entry x:Name="txtB"
+                       BackgroundColor="Azure"
+                           FontSize="30"
+                           HorizontalOptions="FillAndExpand"/>
+                <Label
+                    Text="X+"
+                    BackgroundColor="CadetBlue"
+                    FontSize="30"
+                           HorizontalOptions="FillAndExpand"/>
+                <Entry x:Name="txtC"
+                       BackgroundColor="Azure"
+                           FontSize="30"
+                           HorizontalOptions="FillAndExpand"/>
+                <Label
+                    Text="=0"
+                    FontSize="30"
+                           HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout 
+                Orientation="Horizontal">
+                <Button
+                    Text="OK"
+                    Clicked="btnOk_Clicked"
+                    FontSize="30"
+                   HorizontalOptions="Start"/>
+                <Label
+                    x:Name="lblAns"
+                    Text="X=?"
+                    FontSize="30"
+                    HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

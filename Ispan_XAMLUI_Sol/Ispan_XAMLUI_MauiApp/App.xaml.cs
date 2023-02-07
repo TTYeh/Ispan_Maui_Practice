@@ -1,4 +1,6 @@
-﻿namespace Ispan_XAMLUI_MauiApp
+﻿
+
+namespace Ispan_XAMLUI_MauiApp
 {
     public partial class App : Application
     {
@@ -7,7 +9,8 @@
             InitializeComponent();
 
             //MainPage = new AppShell();
-            MainPage = new Lotto();
+            // MainPage = new Lotto();
+            MainPage = new UnaryQuadraticEquation();
         }
     }
 }
