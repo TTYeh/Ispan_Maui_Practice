@@ -5,18 +5,25 @@ namespace Ispan_XAMLUI_MauiApp.Views;
 public partial class CustomerSystem : ContentPage
 {
 	List<CCustomer> Mycustomers = new List<CCustomer>();
-    int currentId { get; set; }
+    private int currentId { get; set; }
     public CustomerSystem()
 	{
 		InitializeComponent();
-		Mycustomers.Add(new CCustomer()
-		{
-			id = 1,
-			name = "John",
-			phone = "12345678",
-			address = "Taipei",
-			email = "ass@bss.com"
-		});
+        this.currentId = 0;
+        this.Loaded += CustomerSystem_Loaded;
+    }
+
+    private void CustomerSystem_Loaded(object sender, EventArgs e)
+    {
+        // ¸ü¤J½d¨Ò¸ê®Æ
+        Mycustomers.Add(new CCustomer()
+        {
+            id = 1,
+            name = "John",
+            phone = "12345678",
+            address = "Taipei",
+            email = "ass@bss.com"
+        });
         Mycustomers.Add(new CCustomer()
         {
             id = 2,
@@ -33,10 +40,9 @@ public partial class CustomerSystem : ContentPage
             address = "Ispan",
             email = "ddd@bss.com"
         });
-
     }
 
-	private void btnFirst_Clicked(object sender, EventArgs e)
+    private void btnFirst_Clicked(object sender, EventArgs e)
 	{
         txtId.Text = Mycustomers[0].id.ToString();
         txtName.Text = Mycustomers[0].name;

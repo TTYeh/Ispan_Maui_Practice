@@ -13,8 +13,10 @@ namespace Ispan_XAMLUI_MauiApp
             //MainPage = new UnaryQuadraticEquation();
             //MainPage = new GridDemo();
             //MainPage = new NavigationPage(new Page1());
-
-            MainPage = new CustomerSystem();
+            //MainPage = new NavigationPage(new Page2());
+            //MainPage = new CustomerSystem();
+            MainPage = new NavigationPage(new MainPage());
+            
 
 
         }
