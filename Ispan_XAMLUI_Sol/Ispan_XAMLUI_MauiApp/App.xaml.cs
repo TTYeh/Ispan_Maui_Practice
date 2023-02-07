@@ -1,4 +1,4 @@
-﻿
+﻿using Ispan_XAMLUI_MauiApp.Views;
 
 namespace Ispan_XAMLUI_MauiApp
 {
@@ -10,7 +10,9 @@ namespace Ispan_XAMLUI_MauiApp
 
             //MainPage = new AppShell();
             // MainPage = new Lotto();
-            MainPage = new UnaryQuadraticEquation();
+            //MainPage = new UnaryQuadraticEquation();
+            MainPage = new GridDemo();
+
         }
     }
 }
