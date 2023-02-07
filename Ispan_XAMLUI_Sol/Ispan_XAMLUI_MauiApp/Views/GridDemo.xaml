@@ -191,5 +191,19 @@
                     HorizontalOptions="Fill"
                     VerticalOptions="Center" />
         </Grid>
+        <Label
+            x:Name="leftVal"
+            Text = "計算機範例"
+            HeightRequest="50"
+            FontSize="32"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center" />
+        <Label
+            x:Name="rightVal"
+            Text = "計算機範例"
+            HeightRequest="50"
+            FontSize="32"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center" />
     </StackLayout>
 </ContentPage>

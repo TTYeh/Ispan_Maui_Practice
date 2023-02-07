@@ -11,8 +11,14 @@ namespace Ispan_XAMLUI_MauiApp
             //MainPage = new AppShell();
             // MainPage = new Lotto();
             //MainPage = new UnaryQuadraticEquation();
-            MainPage = new GridDemo();
+            //MainPage = new GridDemo();
+            //MainPage = new NavigationPage(new Page1());
+
+            MainPage = new CustomerSystem();
+
 
         }
+
+        public string user { get; internal set; }
     }
 }
