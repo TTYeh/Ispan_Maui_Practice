@@ -5,7 +5,8 @@ namespace Ispan_XAMLUI_MauiApp.Views;
 public partial class CustomerSystem : ContentPage
 {
 	List<CCustomer> Mycustomers = new List<CCustomer>();
-	public CustomerSystem()
+    int currentId { get; set; }
+    public CustomerSystem()
 	{
 		InitializeComponent();
 		Mycustomers.Add(new CCustomer()
@@ -46,18 +47,33 @@ public partial class CustomerSystem : ContentPage
 
 	private void btnPrevious_Clicked(object sender, EventArgs e)
 	{
-
-	}
+        if (currentId - 1 >= 0) currentId -= 1;
+        txtId.Text = Mycustomers[currentId].id.ToString();
+        txtName.Text = Mycustomers[currentId].name;
+        txtAddress.Text = Mycustomers[currentId].address;
+        txtEmail.Text = Mycustomers[currentId].email;
+        txtPhone.Text = Mycustomers[currentId].phone;
+    }
 
 	private void btnNext_Clicked(object sender, EventArgs e)
 	{
-
-	}
+        if (currentId < Mycustomers.Count - 1) currentId += 1; 
+        txtId.Text = Mycustomers[currentId].id.ToString();
+        txtName.Text = Mycustomers[currentId].name;
+        txtAddress.Text = Mycustomers[currentId].address;
+        txtEmail.Text = Mycustomers[currentId].email;
+        txtPhone.Text = Mycustomers[currentId].phone;
+    }
 
 	private void btnLast_Clicked(object sender, EventArgs e)
 	{
-
-	}
+        currentId = Mycustomers.Count - 1;
+        txtId.Text = Mycustomers[currentId].id.ToString();
+        txtName.Text = Mycustomers[currentId].name;
+        txtAddress.Text = Mycustomers[currentId].address;
+        txtEmail.Text = Mycustomers[currentId].email;
+        txtPhone.Text = Mycustomers[currentId].phone;
+    }
 
 	private void btnQuery_Clicked(object sender, EventArgs e)
 	{
