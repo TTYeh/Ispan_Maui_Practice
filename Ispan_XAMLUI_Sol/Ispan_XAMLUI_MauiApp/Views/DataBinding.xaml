@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ispan_XAMLUI_MauiApp.Views.DataBinding"
+             Title="DataBinding">
+    <VerticalStackLayout>
+        <Label
+            x:Name="labelHi"
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="50"/>
+        <Slider x:Name="slider"
+                Minimum="10"
+                Maximum="100"
+                VerticalOptions="CenterAndExpand"
+                Value="{Binding Source={x:Reference labelHi}, Path = FontSize}"
+                />
+    </VerticalStackLayout>
+</ContentPage>

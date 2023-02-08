@@ -1,13 +1,15 @@
 using Ispan_XAMLUI_MauiApp.Models;
-
 namespace Ispan_XAMLUI_MauiApp.Views;
 
 public partial class CustomerSystem : ContentPage
 {
 	List<CCustomer> Mycustomers = new List<CCustomer>();
     private int currentId { get; set; }
+
+    private CustomerViewModels vm = new CustomerViewModels();
     public CustomerSystem()
 	{
+        
 		InitializeComponent();
         this.currentId = 0;
         this.Loaded += CustomerSystem_Loaded;
@@ -15,6 +17,8 @@ public partial class CustomerSystem : ContentPage
 
     private void CustomerSystem_Loaded(object sender, EventArgs e)
     {
+        // 清除快取資料
+        claerCache();
         // 載入範例資料
         #region data
         Mycustomers.Add(new CCustomer()
@@ -70,6 +74,7 @@ public partial class CustomerSystem : ContentPage
     }
     public void Display()
     {
+        if (currentId < 0) return;
         txtId.Text = Mycustomers[currentId].id.ToString();
         txtName.Text = Mycustomers[currentId].name;
         txtAddress.Text = Mycustomers[currentId].address;
