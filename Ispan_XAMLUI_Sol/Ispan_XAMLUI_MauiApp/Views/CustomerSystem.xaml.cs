@@ -16,6 +16,7 @@ public partial class CustomerSystem : ContentPage
     private void CustomerSystem_Loaded(object sender, EventArgs e)
     {
         // ¸ü¤J½d¨Ò¸ê®Æ
+        #region data
         Mycustomers.Add(new CCustomer()
         {
             id = 1,
@@ -40,40 +41,35 @@ public partial class CustomerSystem : ContentPage
             address = "Ispan",
             email = "ddd@bss.com"
         });
+        #endregion
     }
 
     private void btnFirst_Clicked(object sender, EventArgs e)
 	{
-        txtId.Text = Mycustomers[0].id.ToString();
-        txtName.Text = Mycustomers[0].name;
-        txtAddress.Text = Mycustomers[0].address;
-        txtEmail.Text = Mycustomers[0].email;
-        txtPhone.Text = Mycustomers[0].phone;
+        // Get First Data
+        currentId = 0;
+        Display();
     }
 
 	private void btnPrevious_Clicked(object sender, EventArgs e)
 	{
         if (currentId - 1 >= 0) currentId -= 1;
-        txtId.Text = Mycustomers[currentId].id.ToString();
-        txtName.Text = Mycustomers[currentId].name;
-        txtAddress.Text = Mycustomers[currentId].address;
-        txtEmail.Text = Mycustomers[currentId].email;
-        txtPhone.Text = Mycustomers[currentId].phone;
+        Display();
     }
 
 	private void btnNext_Clicked(object sender, EventArgs e)
 	{
-        if (currentId < Mycustomers.Count - 1) currentId += 1; 
-        txtId.Text = Mycustomers[currentId].id.ToString();
-        txtName.Text = Mycustomers[currentId].name;
-        txtAddress.Text = Mycustomers[currentId].address;
-        txtEmail.Text = Mycustomers[currentId].email;
-        txtPhone.Text = Mycustomers[currentId].phone;
+        if (currentId < Mycustomers.Count - 1) currentId += 1;
+        Display();
     }
 
 	private void btnLast_Clicked(object sender, EventArgs e)
 	{
         currentId = Mycustomers.Count - 1;
+        Display();
+    }
+    public void Display()
+    {
         txtId.Text = Mycustomers[currentId].id.ToString();
         txtName.Text = Mycustomers[currentId].name;
         txtAddress.Text = Mycustomers[currentId].address;
