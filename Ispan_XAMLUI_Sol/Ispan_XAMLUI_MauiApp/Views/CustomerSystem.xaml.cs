@@ -96,6 +96,14 @@ public partial class CustomerSystem : ContentPage
 
     private void findCustomer(string keyword)
     {
+        //var result = Mycustomers.Where(x => x.name.Contains(keyword) ||
+        //x.address.Contains(keyword) ||
+        //x.email.Contains(keyword) ||
+        //x.phone.Contains(keyword)).FirstOrDefault();
+        //currentId = result.id;
+        //Display();
+        // ¥Îlinq²£¥Í
+        
         for (int i = 0; i < Mycustomers.Count; i++)
         {
             if (Mycustomers[i].name.Contains(keyword)||
@@ -108,7 +116,7 @@ public partial class CustomerSystem : ContentPage
                 break;
             }
         }
-
+        
 
     }
 
