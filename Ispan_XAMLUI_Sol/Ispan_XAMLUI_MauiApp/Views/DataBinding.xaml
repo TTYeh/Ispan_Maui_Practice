@@ -10,6 +10,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center"
             FontSize="50"/>
+        <!--靜態系結-->
         <Slider x:Name="slider"
                 Minimum="10"
                 Maximum="100"
