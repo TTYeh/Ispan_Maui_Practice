@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ispan_XAMLUI_MauiApp.Views.CustomerQuery"
+             Title="CustomerQuery">
+    <VerticalStackLayout>
+        <Label 
+            Text="關鍵字查詢"
+            FontSize="Large"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <StackLayout
+            Orientation="Horizontal"
+            HorizontalOptions="FillAndExpand">
+            <Entry x:Name="textQueryWord"
+                   FontSize="35"
+                   HorizontalOptions="FillAndExpand"
+                   />
+            <ImageButton Source="query"
+                         Clicked="btnQuery_Clicked"
+                         HorizontalOptions="End"
+                         BackgroundColor="#000F70"
+                         />
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>

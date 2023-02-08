@@ -59,7 +59,7 @@ public partial class CustomerSystem : ContentPage
 
 	private void btnNext_Clicked(object sender, EventArgs e)
 	{
-        if (currentId < Mycustomers.Count - 1) currentId += 1;
+        if (currentId + 1 < Mycustomers.Count - 1) currentId += 1;
         Display();
     }
 
@@ -79,10 +79,40 @@ public partial class CustomerSystem : ContentPage
 
 	private void btnQuery_Clicked(object sender, EventArgs e)
 	{
+        App app = Application.Current as App;
+        app.Queryword = "";
+        Navigation.PushAsync(new CustomerQuery());
+    }
 
-	}
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        App app = Application.Current as App;
+        if (!string.IsNullOrEmpty(app.Queryword))
+        {
+            findCustomer(app.Queryword);
+        }
+    }
 
-	private void btnList_Clicked(object sender, EventArgs e)
+    private void findCustomer(string keyword)
+    {
+        for (int i = 0; i < Mycustomers.Count; i++)
+        {
+            if (Mycustomers[i].name.Contains(keyword)||
+                Mycustomers[i].address.Contains(keyword) ||
+                Mycustomers[i].email.Contains(keyword) ||
+                Mycustomers[i].phone.Contains(keyword))
+            {
+                currentId = i;
+                Display();
+                break;
+            }
+        }
+
+
+    }
+
+    private void btnList_Clicked(object sender, EventArgs e)
 	{
 
 	}

@@ -205,5 +205,12 @@
             FontSize="32"
             HorizontalOptions="CenterAndExpand"
             VerticalOptions="Center" />
+        <Label
+            x:Name="allInput"
+            Text = "計算機範例"
+            HeightRequest="50"
+            FontSize="32"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Center" />
     </StackLayout>
 </ContentPage>

@@ -22,5 +22,6 @@ namespace Ispan_XAMLUI_MauiApp
         }
 
         public string user { get; internal set; }
+        public string Queryword { get; internal set; }
     }
 }
