@@ -16,5 +16,16 @@
                 VerticalOptions="CenterAndExpand"
                 Value="{Binding Source={x:Reference labelHi}, Path = FontSize}"
                 />
+        <Label
+            x:Name="labelDynamic"
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="50"/>
+        <Slider x:Name="slider2"
+                Minimum="10"
+                Maximum="100"
+                VerticalOptions="CenterAndExpand"
+                />
     </VerticalStackLayout>
 </ContentPage>
