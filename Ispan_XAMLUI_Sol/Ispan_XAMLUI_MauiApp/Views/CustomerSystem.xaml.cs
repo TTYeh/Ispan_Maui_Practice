@@ -80,7 +80,7 @@ public partial class CustomerSystem : ContentPage
 	private void btnQuery_Clicked(object sender, EventArgs e)
 	{
         App app = Application.Current as App;
-        app.Queryword = "";
+        claerCache();
         Navigation.PushAsync(new CustomerQuery());
     }
 
@@ -91,6 +91,11 @@ public partial class CustomerSystem : ContentPage
         if (!string.IsNullOrEmpty(app.Queryword))
         {
             findCustomer(app.Queryword);
+        }
+        else if (app.selectIndex >= 0)
+        {
+            currentId = app.selectIndex;
+            Display();
         }
     }
 
@@ -116,12 +121,20 @@ public partial class CustomerSystem : ContentPage
                 break;
             }
         }
-        
 
     }
 
     private void btnList_Clicked(object sender, EventArgs e)
 	{
-
-	}
+        App app = Application.Current as App;
+        claerCache();
+        app.customerList = Mycustomers;
+        Navigation.PushAsync(new CustomerList());
+    }
+    private static void claerCache()
+    {
+        App app = Application.Current as App;
+        app.Queryword = "";
+        app.selectIndex = -1;
+    }
 }

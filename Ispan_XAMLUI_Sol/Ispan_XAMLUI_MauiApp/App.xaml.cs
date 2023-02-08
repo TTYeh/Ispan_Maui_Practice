@@ -1,4 +1,5 @@
-﻿using Ispan_XAMLUI_MauiApp.Views;
+﻿using Ispan_XAMLUI_MauiApp.Models;
+using Ispan_XAMLUI_MauiApp.Views;
 
 namespace Ispan_XAMLUI_MauiApp
 {
@@ -23,5 +24,8 @@ namespace Ispan_XAMLUI_MauiApp
 
         public string user { get; internal set; }
         public string Queryword { get; internal set; }
+
+        public int selectIndex { get; set; }
+        public List<CCustomer> customerList { get; internal set; }
     }
 }

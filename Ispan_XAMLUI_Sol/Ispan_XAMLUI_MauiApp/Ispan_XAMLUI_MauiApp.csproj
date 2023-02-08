@@ -68,6 +68,9 @@
 	  <MauiXaml Update="Lotto.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\CustomerList.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\CustomerQuery.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
