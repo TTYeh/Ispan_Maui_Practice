@@ -6,6 +6,7 @@
     <VerticalStackLayout>
         <ListView 
             x:Name="listViewAll"
+            ItemSelected="listViewAll_ItemSelected"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>

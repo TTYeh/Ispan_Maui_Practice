@@ -4,6 +4,7 @@ namespace Ispan_XAMLUI_MauiApp.Views;
 
 public partial class TodoListPage : ContentPage
 {
+    private int currentSN;
 	public TodoListPage()
 	{
 		InitializeComponent();
@@ -42,5 +43,20 @@ public partial class TodoListPage : ContentPage
         App app = (App)Application.Current;
         app.todoEleList = todoEleList;
         Navigation.PushAsync(new TodoListView());
+    }
+    protected override void OnAppearing()
+    {
+        // 回傳顯示時抓資料
+        base.OnAppearing();
+        App app = Application.Current as App;
+        if (app.selectTodoIndex >= 0)
+        {
+            currentSN = app.selectTodoIndex - 1;
+            // Display
+            TodoElement todo = new TodoElement();
+            todo.Item = Preferences.Default.Get("T1" + currentSN.ToString(), "沒有資料");
+            todo.FinishedDate = Preferences.Default.Get("D1" + currentSN.ToString(), "沒有資料");
+            txtReadShow.Text = "您選擇的資料是: "+ todo.Item + " " + todo.FinishedDate;
+        }
     }
 }
