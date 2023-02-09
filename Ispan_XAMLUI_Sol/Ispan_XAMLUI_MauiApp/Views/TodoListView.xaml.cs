@@ -15,6 +15,7 @@ public partial class TodoListView : ContentPage
         if (e.SelectedItemIndex >= 0)
         {
             App app = Application.Current as App;
+            app.selectTodoElement = app.todoEleList[e.SelectedItemIndex];
             app.selectTodoIndex = e.SelectedItemIndex;
             Navigation.PopAsync();
         }

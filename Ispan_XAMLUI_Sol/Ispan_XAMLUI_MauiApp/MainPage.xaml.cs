@@ -38,5 +38,10 @@ namespace Ispan_XAMLUI_MauiApp
         {
             Navigation.PushAsync(new TodoListPage());
         }
+
+        private void onClick_FileIO(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new FileIO());
+        }
     }
 }

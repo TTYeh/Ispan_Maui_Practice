@@ -7,12 +7,13 @@ namespace Ispan_XAMLUI_MauiApp
     {
         public string user { get; internal set; }
         public string Queryword { get; internal set; }
-
         public int selectIndex { get; set; }
         public List<CCustomer> customerList { get; internal set; }
         public List<TodoElement> todoEleList { get; internal set; }
         
         public int selectTodoIndex { get; set; }
+
+        public TodoElement selectTodoElement { get; set; }
         public App()
         {
             InitializeComponent();
@@ -27,9 +28,10 @@ namespace Ispan_XAMLUI_MauiApp
             //MainPage = new NavigationPage(new CustomerSystem());
             //MainPage = new DataBinding();
             //MainPage = new NavigationPage(new TodoListPage());
+            MainPage = new NavigationPage(new FileIO());
             
             // 正是路徑
-            MainPage = new NavigationPage(new MainPage());
+            //MainPage = new NavigationPage(new MainPage());
 
             // 初始化APP的資料
             selectIndex = -1; // 選擇的項目是空的

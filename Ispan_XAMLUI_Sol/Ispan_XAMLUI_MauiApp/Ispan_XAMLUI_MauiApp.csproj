@@ -95,6 +95,9 @@
 	  <MauiXaml Update="Views\DataBinding.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\FileIO.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\GridDemo.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

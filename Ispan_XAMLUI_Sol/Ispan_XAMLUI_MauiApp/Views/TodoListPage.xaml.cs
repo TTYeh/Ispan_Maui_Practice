@@ -8,7 +8,10 @@ public partial class TodoListPage : ContentPage
 	public TodoListPage()
 	{
 		InitializeComponent();
-	}
+        App app = Application.Current as App;
+        app.selectTodoIndex = -1;
+
+    }
 
 	private void btnAdd_click(object sender, EventArgs e)
 	{
@@ -51,11 +54,12 @@ public partial class TodoListPage : ContentPage
         App app = Application.Current as App;
         if (app.selectTodoIndex >= 0)
         {
-            currentSN = app.selectTodoIndex - 1;
+            currentSN = app.selectTodoIndex ;
             // Display
             TodoElement todo = new TodoElement();
-            todo.Item = Preferences.Default.Get("T1" + currentSN.ToString(), "沒有資料");
-            todo.FinishedDate = Preferences.Default.Get("D1" + currentSN.ToString(), "沒有資料");
+            //todo.Item = Preferences.Default.Get("T1" + currentSN.ToString(), "沒有資料");
+            //todo.FinishedDate = Preferences.Default.Get("D1" + currentSN.ToString(), "沒有資料");
+            todo = app.selectTodoElement;
             txtReadShow.Text = "您選擇的資料是: "+ todo.Item + " " + todo.FinishedDate;
         }
     }
