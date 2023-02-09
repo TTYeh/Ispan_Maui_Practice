@@ -17,7 +17,7 @@
             x:Name="entryItem"
             Text="請輸入..."
             FontSize="25"
-            BackgroundColor="Beige"
+            BackgroundColor="Red"
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <Label 
@@ -29,19 +29,19 @@
             x:Name="entryFinishedDate"
             Text="請輸入..."
             FontSize="25"
-            BackgroundColor="Beige"
+            BackgroundColor="Red"
             VerticalOptions="Start" 
             HorizontalOptions="Start" />
         <HorizontalStackLayout>
             <Button 
                 Clicked="btnAdd_click"
-                Text="Save"
+                Text="加入"
                 FontSize="25"
                 VerticalOptions="Start" 
                 HorizontalOptions="Start" />
             <Button 
                 Clicked="btnReadAll_click"
-                Text="Read"
+                Text="瀏覽"
                 FontSize="25"
                 VerticalOptions="Start" 
                 HorizontalOptions="Start" />

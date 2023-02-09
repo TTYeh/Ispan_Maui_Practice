@@ -33,5 +33,6 @@ namespace Ispan_XAMLUI_MauiApp
 
         public int selectIndex { get; set; }
         public List<CCustomer> customerList { get; internal set; }
+        public List<TodoElement> todoEleList { get; internal set; }
     }
 }
