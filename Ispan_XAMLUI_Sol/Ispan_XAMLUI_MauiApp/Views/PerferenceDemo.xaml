@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ispan_XAMLUI_MauiApp.Views.PerferenceDemo"
+             Title="PerferenceDemo">
+    <VerticalStackLayout>
+        <Label 
+            Text="代辦工作 App!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+            Text="工作項目"
+            FontSize="25"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" />
+        <Entry
+            x:Name="entryItem"
+            Text="請輸入..."
+            FontSize="25"
+            BackgroundColor="Beige"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" />
+        <Label 
+            Text="預計完成日期"
+            FontSize="25"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" />
+        <Entry
+            x:Name="entryFinishedDate"
+            Text="請輸入..."
+            FontSize="25"
+            BackgroundColor="Beige"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" />
+        <Button 
+            Clicked="btnAdd_click"
+            Text="Save"
+            FontSize="25"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" />
+        <Button 
+            Clicked="btnReadAll_click"
+            Text="Read"
+            FontSize="25"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" />
+        <Label 
+            x:Name="txtReadShow"
+            Text="..."
+            FontSize="25"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start" />
+    </VerticalStackLayout>
+</ContentPage>
