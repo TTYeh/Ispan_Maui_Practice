@@ -23,7 +23,10 @@
         <Button Text="啟動:待辦清單(存在手機內存)"
                 Clicked="onClick_Todolist"/>
         <Label Text="Example_7:File I/O(存在桌面)" />
-        <Button Text="啟動:待辦清單"
+        <Button Text="啟動FileIo:"
                 Clicked="onClick_FileIO"/>
+        <Label Text="Example_8:HTTP Get GoogleData" />
+        <Button Text="啟動:Google的爬蟲"
+                Clicked="onClick_Http"/>
     </VerticalStackLayout>
 </ContentPage>

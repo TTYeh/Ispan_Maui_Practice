@@ -43,5 +43,10 @@ namespace Ispan_XAMLUI_MauiApp
         {
             Navigation.PushAsync(new FileIO());
         }
+
+        private void onClick_Http(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new HttpGetData());
+        }
     }
 }

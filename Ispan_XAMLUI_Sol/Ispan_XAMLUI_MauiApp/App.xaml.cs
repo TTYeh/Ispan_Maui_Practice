@@ -28,8 +28,8 @@ namespace Ispan_XAMLUI_MauiApp
             //MainPage = new NavigationPage(new CustomerSystem());
             //MainPage = new DataBinding();
             //MainPage = new NavigationPage(new TodoListPage());
-            MainPage = new NavigationPage(new FileIO());
-            
+            //MainPage = new NavigationPage(new FileIO());
+            MainPage = new NavigationPage(new HttpGetData());            
             // 正是路徑
             //MainPage = new NavigationPage(new MainPage());
 
