@@ -19,5 +19,8 @@
         <Label Text="Example_5:客戶清單瀏覽" />
         <Button Text="啟動:客戶清單瀏覽"
                 Clicked="onClick_CustomerSys"/>
+        <Label Text="Example_6:待辦清單" />
+        <Button Text="啟動:待辦清單"
+                Clicked="onClick_Todolist"/>
     </VerticalStackLayout>
 </ContentPage>

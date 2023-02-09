@@ -33,5 +33,10 @@ namespace Ispan_XAMLUI_MauiApp
         {
             Navigation.PushAsync(new CustomerSystem());
         }
+
+        private void onClick_Todolist(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new TodoListPage());
+        }
     }
 }

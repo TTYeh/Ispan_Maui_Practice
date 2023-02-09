@@ -9,7 +9,6 @@ namespace Ispan_XAMLUI_MauiApp
         {
             InitializeComponent();
             // 測試用路徑
-
             //MainPage = new AppShell();
             // MainPage = new Lotto();
             //MainPage = new UnaryQuadraticEquation();
@@ -18,12 +17,12 @@ namespace Ispan_XAMLUI_MauiApp
             //MainPage = new NavigationPage(new Page2());
             //MainPage = new CustomerSystem();
             //MainPage = new NavigationPage(new CustomerSystem());
-
             //MainPage = new DataBinding();
-
+            //MainPage = new NavigationPage(new TodoListPage());
+            
             // 正是路徑
-            //MainPage = new NavigationPage(new MainPage());
-            MainPage = new NavigationPage(new TodoListPage());
+            MainPage = new NavigationPage(new MainPage());
+
             // 初始化APP的資料
             selectIndex = -1; // 選擇的項目是空的
         }
