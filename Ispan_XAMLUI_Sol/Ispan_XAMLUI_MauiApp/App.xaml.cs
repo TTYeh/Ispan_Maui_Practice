@@ -29,9 +29,9 @@ namespace Ispan_XAMLUI_MauiApp
             //MainPage = new DataBinding();
             //MainPage = new NavigationPage(new TodoListPage());
             //MainPage = new NavigationPage(new FileIO());
-            MainPage = new NavigationPage(new HttpGetData());            
+            //MainPage = new NavigationPage(new HttpGetData());
             // 正是路徑
-            //MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MainPage());
 
             // 初始化APP的資料
             selectIndex = -1; // 選擇的項目是空的
