@@ -44,6 +44,7 @@
 	  <AndroidSigningStorePass>Qwer08246549</AndroidSigningStorePass>
 	  <AndroidSigningKeyAlias>MauiAlias</AndroidSigningKeyAlias>
 	  <AndroidSigningKeyPass>RSA</AndroidSigningKeyPass>
+	  <PublishTrimmed>True</PublishTrimmed>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-ios|AnyCPU'">
@@ -82,12 +83,13 @@
 	  <AndroidSigningKeyPass>Asdf08246549</AndroidSigningKeyPass>
 	</PropertyGroup>
 
-	
+
 	<PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
-		<AndroidKeyStore>False</AndroidKeyStore>
+		<AndroidKeyStore>True</AndroidKeyStore>
 		<AndroidSigningKeyStore>key.keystore</AndroidSigningKeyStore>
 		<AndroidSigningStorePass>Qwer08246549</AndroidSigningStorePass>
 		<AndroidSigningKeyAlias>MauiAlias</AndroidSigningKeyAlias>
+		<AndroidSigningKeyPass>Qwer08246549</AndroidSigningKeyPass>
 	</PropertyGroup>
 
 	<!--<PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
